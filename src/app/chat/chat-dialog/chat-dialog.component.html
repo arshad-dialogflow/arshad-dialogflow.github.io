@@ -1,4 +1,6 @@
-<h1>Angular Bot</h1>
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+<div class="chatdialogdiv">
+  <h1>Talk to me</h1>
 <ng-container *ngFor="let message of messages | async">
   <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
                                     'to': message.sentBy === 'user' }">
@@ -12,3 +14,4 @@
 <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"><br>
 
 <button (click)="sendMessage()">Send</button>
+</div>
